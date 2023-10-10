@@ -131,8 +131,8 @@ MEDIA_URL = "/media/"
 MEDIA_ROOT = BASE_DIR / "media/"
 
 REST_FRAMEWORK= {
-    'DEFAULT_PERMISSION_CLASSES': [
+    'DEFAULT_PERMISSION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
         # 'rest_framework.permissions.IsAdminUser’,
-        ],
+        
         'PAGE_SIZE': 10
 }
